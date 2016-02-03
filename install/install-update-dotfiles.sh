@@ -7,7 +7,7 @@ pushd "$HOME"
       git pull
     popd
   else
-    git clone "git://github.com/joshball/dot-files.git" ".dot-files"
+    git clone "git://github.com/jessesanford/dot-files.git" ".dot-files"
   fi
 
   # ls -1d .dot-files/files/* .dot-files/files/.* | while read f; do
