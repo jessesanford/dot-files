@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
 
 #
-# REPO: https://github.com/joshball/dot-files
+# REPO: https://github.com/jessesanford/dot-files
 #
 # This script:
-# curl -k https://raw.githubusercontent.com/joshball/dot-files/master/install/babun-post-install.sh | zsh
+# curl -k https://raw.githubusercontent.com/jessesanford/dot-files/master/install/babun-post-install.sh | zsh
 #
 # Borrowed from:
 # curl -k https://gist.githubusercontent.com/prabirshrestha/279d8b179d9353fe8694/raw/babun-post-install | zsh
@@ -22,7 +22,7 @@ fancy_echo "Updating babun"
 	successfully pact update
 
 fancy_echo "Updating babun HOME ~/.zshrc"
-	successfully curl -k https://raw.githubusercontent.com/joshball/dot-files/master/files/babun-home/.zshrc -o ~/.zshrc
+	successfully curl -k https://raw.githubusercontent.com/jessesanford/dot-files/master/files/babun-home/.zshrc -o ~/.zshrc
 
 
 # fancy_echo "Updating ~/.zshrc"
