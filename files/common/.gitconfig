@@ -1,53 +1,32 @@
-[user]
-	name = Joshua Ball
-	email = joshua.g.s.ball@gmail.com
-[core]
-	autocrlf = true
-	excludesfile = W:\\Users\\Joshua\\Documents\\gitignore_global.txt
-	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
-[difftool "sourcetree"]
-	cmd = 'C:/Program Files (x86)/WinMerge/WinMergeU.exe' \"$LOCAL\" \"$REMOTE\"
-	prompt = false
-[mergetool "sourcetree"]
-	cmd = 'C:/Program Files/Perforce/p4merge.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-	trustExitCode = true
-	prompt = false
-[diff]
-	tool = p4merge
-	prompt = false
-	guitool = kdiff3
-[difftool]
-	prompt = false
-[merge]
-	tool = p4merge
-[credential]
-	helper = !\"C:\\Program Files (x86)\\GitExtensions\\GitCredentialWinStore\\git-credential-winstore.exe\"
-[difftool "p4merge"]
-	path = C:/Program Files/Perforce/p4merge.exe
-	cmd = 'C:/Program Files/Perforce/p4merge.exe' \"$LOCAL\" \"$REMOTE\"
-[mergetool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
-[difftool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
-	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
-[difftool "winmerge"]
-	path = C:/Program Files (x86)/WinMerge/WinMergeU.exe
-	cmd = \"C:/Program Files (x86)/WinMerge/WinMergeU.exe\" \"$LOCAL\" \"$REMOTE\"
-	prompt = false
-[difftool "meld"]
-	path = C:/Program Files (x86)/Meld/Meld.exe
-	cmd = \"C:/Program Files (x86)/Meld/Meld.exe\" \"$LOCAL\" \"$REMOTE\"
-	prompt = false
-[difftool "diffmerge"]
-	path = C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe
-	cmd = \"C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe\" \"$LOCAL\" \"$REMOTE\"
-	prompt = false
-[mergetool "p4merge"]
-	path = C:/Program Files/Perforce/p4merge.exe
-	cmd = \"C:/Program Files/Perforce/p4merge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
 [push]
 	default = matching
+[core]
+	trustctime = false
+	editor = vim
+	filemode = false
+	autocrlf = true
+[color]
+	ui = true
+[credential]
+	helper = cache --timeout=3600
+[merge]
+	tool = vimdiff
+[mergetool]
+	keeptemporaries = false
+	keepbackups = false
+	prompt = false
+	trustexitcode = false
+[alias]
+	last = log -1 --stat
+	cp = cherry-pick
+	co = checkout
+	cl = clone
+	ci = commit
+	st = status -sb
+	br = branch
+	unstage = reset HEAD --
+	dc = diff --cached
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+[user]
+	name = jessesanford
+	email = jessesanford@gmail.com
